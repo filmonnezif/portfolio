@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmon Nezif</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            
+            <div>
+                <h1>Filmon Nezif</h1>
+            </div>
+            <div>
+                <button class="tab active" onclick="showContent('about')">About Me</button>
+                <button class="tab" onclick="showContent('projects')">Projects</button>
+                <button class="tab" onclick="showContent('contact')">Contact</button>
+            </div>
+  
+        </nav>
+
+        <div id="about" class="aboutme">
+            <div id= "image" class="aboutmepic">
+                <img id="aboutmepic-img" src="/static/bg.jpg" alt="Profile pic">
+            </div>
+            <div class="aboutmecontent">
+                <div class="circuit-item">
+                    <h2 id="greatings"> </h2> 
+                    <p id="typing-text"></p>
+                </div>
+                
+            </div>
+        </div>
+        <div id="projects" class="projectscontainer">
+            <div  class="projects">
+                <h2>Projects</h2>
+            </div>
+                <div class="project-tab">
+                <span class="project-tab-button active" onclick="showProjectDetails('rafek')">RAFEK</span>
+                <span class="project-tab-button" onclick="showProjectDetails('arabic')">Learn Arabic HCT SJM</span>
+                <span class="project-tab-button" onclick="showProjectDetails('littleprojects')">Other projects</span>
+                </div>
+                <div class="details-img" id="rafek-details">
+                    
+                    <div class="project-details">
+                      <h2>RAFEK: AI Carbon Footprint Calculator.</h2>
+                      <p>RAFEK uses users expense data to figure out their footprint.<br><br>
+                        It magically creates reports in Word and Excel, so users don't have to write anything down. (high five!)<br><br>
+                        RAFEK analyzes users data and gives them cool ideas to shrink thier footprint, making them an eco-champ!<br><br>
+                        It also gives AI predictions to see the future (of your carbon footprint).<br><br>
+
+                        Built with : Python, Kivy & KivyMD, OpenAI API<br><br>
+
+                        This project helped me and my team grab 3rd place at the 7th UAE Hackathon! So it's not just cool, it's award-winning.<br><br>
+                    </p>
+                    </div>
+                    <div class="project-image-container">
+                      <img src="/static/r (2).png" alt="Project image 3">
+                      <img src="/static/r (3).png" alt="Project image 4">
+                      <img src="/static/r (4).png" alt="Project image 5">
+                      <img src="/static/r (1).png" alt="Project image 2">
+                    </div>
+                </div>
+                  
+                <div class="details-img" id="arabic-details">
+                    <div class="project-details">
+                        <h2> Learn Arabic HCT SJM: Telegram bot to learn Arabic.</h2>
+                        <p>Why This Bot was Created:<br>
+                            Picture this: You and your friends find yourselves enrolled in an Arabic course.
+                            Your collective Arabic vocabulary consists of "Assalamu alaikum" and "Shukran." 
+                            But as a true engineer, you create a bot to make the course easier.<br><br>
+                            
+                            What It Does:<br>
+                            - Serves up quizzes tailored to your skill level.<br>
+                            - Awards points for correct answers.<br>
+                            - Ignites a competitive spirit among friends, turning language learning into a fun game.<br>
+                            - Makes the entire learning process so enjoyable, you might forget you're actually studying.<br><br>
+
+                            Built with : Python, Telebot<br><br>
+
+                            Shukran to this bot, now i can say أريد أن آكل (Uridu an aakul) (I want to eat). 
+                            Let's be honest, being able to order food is a crucial life skill in any language.
+
+
+
+
+                            
+                        </p>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="/static/first.jpg" alt="Project image 3">
+                        <img src="/static/second.jpg" alt="Project image 4">
+                        <img src="/static/third.jpg" alt="Project image 5">
+                        <img src="/static/fourth.jpg" alt="Project image 2">
+                        <img src="/static/fifth.jpg" alt="Project image 2">
+                        <img src="/static/sixth.jpg" alt="Project image 2">
+                        <img src="/static/seventh.jpg" alt="Project image 2">
+                      </div>
+                </div>
+                <div class="details-img" id="littleprojects-details">
+                    <div class="project-details">
+                        <p>Since I don't have a groundbreaking project to boast about yet. Here are a few examples of my mini-projects:</p>
+
+                        <h2>Automated File Organizer:</h2><p>This script sorts downloads into folders, keeping my files tidy.</p>
+                            
+                        <h2>Email Summarizer:</h2><p>This script analyzes my unread emails, providing me a quick and clear summary.</p> 
+                            
+                        <h2><a href="#game">A boring game:</a></h2> <p>A logic gate simulator I created to add a bit of fun to this portfolio. <a href="#game">Try it here</a>.</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div  class="projects">
+                <h2>Contact</h2>
+            </div>
+            <div id="contact" class="contact-item">
+                <form id="myForm" onsubmit="return submit_message()">
+                    <h3>Leave me a Message</h3>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <br>
+                    <button type="submit">Send</button>
+                    <p id="ifsent">Message sent successefuly!</p>
+                </form>
+                <div>
+                    <h3>My Social Links</h3>
+                    <p class="social-link">
+                      <p><i class="fas fa-envelope"></i> Email: filmonnezif@gmail.com </p>
+                    </p>
+                    <p class="social-link">
+                      <a href="https://github.com/filmonnezif" target="_blank"><i class="fab fa-github"></i> GitHub: github.com/filmonnezif</a>
+                    </p>
+                    <p class="social-link">
+                      <a href="https://linkedin.com/in/filmonnezif" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn: linkedin.com/in/filmonnezif</a>
+                    </p>
+                    <p class="social-link">
+                        <a href="https://t.me/Fil_y" target="_blank"><i class="fab fa-telegram"></i>Telegram: t.me/Fil_y</a>
+                      </p>
+                  </div>
+            </div>
+            <div  class="gamehead projects">
+                <h2>Bored by this portfolio? Try this boring game.</h2>
+                <p>Flick the inputs, light the bulb. Beat the logic!</p>
+                <h2 id="level">Score: 0</h2>
+            </div>
+            <div id= "game" class="game">
+                <div class="content circuit-item">
+                        <div class="input">
+                            <div class="input-btn">
+                                <button id="btn1" onclick="change('btn1')">?</button>
+                            </div>
+                            <div class="input-btn midbtn">
+                                <button id="btn2" onclick="change('btn2')">?</button>
+                            </div>
+                            <div class="input-btn">
+                                <button id="btn3" onclick="change('btn3')">?</button>
+                            </div>
+                        </div>
+                        <div class="gates">
+                            <img src="static/image1.svg" alt="and">
+                        </div>
+                        <div class="bulb">
+                            <img src="static/off.svg" alt="on">
+                        </div>  
+                </div>  
+            </div>
+            <div  class="projects">
+                <button onclick="next()">Next</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Filmon Nezif. All rights reserved.</p>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
